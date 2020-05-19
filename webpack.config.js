@@ -88,7 +88,7 @@ module.exports = {
   externals: process.env.TARGET === 'node' ? {
     'component-emitter' : 'component-emitter',
     'js-cookie' : 'js-cookie',
-    'keen-core' : 'keen-core',
+    '@regang/keen-core' : '@regang/keen-core',
     'whatwg-fetch': 'whatwg-fetch',
     'promise-polyfill': 'promise-polyfill'
   } : {
