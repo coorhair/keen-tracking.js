@@ -7,7 +7,7 @@ const alias = ( process.env.TARGET !== 'node' ) ? [] : {'./cache-browser' : './c
 
 let definePluginVars = {};
 if (process.env.NODE_ENV === 'development') {
-  const demoConfig = require('../demo-config');
+  const demoConfig = require('./demo-config');
   definePluginVars = {
     webpackKeenGlobals: JSON.stringify({ demoConfig })
   };
@@ -83,6 +83,7 @@ module.exports = {
     inline: true,
     hot: false,
     watchContentBase: true,
+    port: 3000,
   },
 
   externals: process.env.TARGET === 'node' ? {
