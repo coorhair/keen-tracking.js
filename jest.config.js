@@ -4,6 +4,7 @@ const files = `<rootDir>/test/unit/modules/*${
 
 module.exports = {
   verbose: true,
+  testURL: "http://localhost/",
   bail: true,
   testMatch: [files],
   testEnvironment: process.env.TEST_ENV || 'jsdom',

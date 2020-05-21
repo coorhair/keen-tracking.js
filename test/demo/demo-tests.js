@@ -12,8 +12,7 @@ const demoTests = (demoConfig, Keen) => {
     user: {
       name: 'John Smith'
     }
-  });
-  /*
+  })
   .then((response) => {
     console.log(response);
     // handle successful responses
@@ -22,19 +21,17 @@ const demoTests = (demoConfig, Keen) => {
     console.log(error);
     // handle errors
   });
-*/
   return;
 
-  client.recordEvent({
-    collection: 'abc',
-    event: {
-      z: 1
-    }
-  });
+  // client.recordEvent({
+  //   collection: 'abc',
+  //   event: {
+  //     z: 1
+  //   }
+  // });
 
-  return;
+  // return;
 
-/*
   const x = Math.random();
   console.log(x);
   const eventBody = {
@@ -47,21 +44,18 @@ const demoTests = (demoConfig, Keen) => {
     }
   };
 
-  client.extendEvents({aaaa: 123});
+  // client.extendEvents({aaaa: 123});
 
-  client.recordEvent('aaa', {
-    // collection: 'abc',
-    event: {
-      z: 1
-    },
-    // requestType: 'beacon',
-    // callback: (err, res) => console.log(err,res)
-  });
+  // client.recordEvent('aaa', {
+  //   collection: 'abc',
+  //   event: {
+  //     z: 1
+  //   },
+  //   requestType: 'beacon',
+  //   callback: (err, res) => console.log(err,res)
+  // });
+  // return;
 
-
-
-  return;
-*/
 function save(id){
   client
     .recordEvent({
@@ -83,74 +77,74 @@ function save(id){
       console.log('error', someError);
     });
 }
-save(1);
-save(2);
-setTimeout(() => save(3), 6000);
-
-return;
-setInterval(() => {
-  eventBody.z=Math.random();
-  save();
-}, 2000);
-setTimeout(() => {
-  save();
-}, 5000);
-
-return;
-
-  client
-    .recordEvent('recordEvent', eventBody)
-    .then((res) => {
-      console.log('with promise');
-      Keen.log('#recordEvent');
-      Keen.log(res);
-      console.log('ok');
-    })
-    .catch(some => {
-      console.log('failed',some);
-    });
-
-  return;
+// save(1);
+// save(2);
+// setTimeout(() => save(3), 6000);
+// return;
 
 
-  client
-    .recordEvent('recordEvent', eventBody, function(err, res){
-      console.log('with callback');
-      if (err) {
-        console.log('err', err);
-      } else {
-        Keen.log('#recordEvent');
-        Keen.log(res);
-      }
-    })
-    .then((res) => {
-      console.log('with promise');
-      Keen.log('#recordEvent');
-      Keen.log(res);
-      console.log('ok');
-    })
-    .catch(some => {
-      console.log('failed',some);
-    });
+// setInterval(() => {
+//   eventBody.z=Math.random();
+//   save();
+// }, 2000);
+// setTimeout(() => {
+//   save();
+// }, 5000);
+// return;
 
-  client.recordEvents({ 'recordEvents': [eventBody, eventBody, eventBody] }, function(err, res){
-    console.log('with callback');
-    if (err) {
-      console.log('err', err);
-    } else {
-      Keen.log('#recordEvents');
-      Keen.log(res);
-    }
-  })
-  .then((res) => {
-    console.log('with promise');
-    Keen.log('#recordEvents');
-    Keen.log(res);
-    console.log('ok');
-  })
-  .catch(err => {
-    console.log('failed', err);
-  });
+  // client
+  //   .recordEvent('recordEvent', eventBody)
+  //   .then((res) => {
+  //     console.log('with promise');
+  //     Keen.log('#recordEvent');
+  //     Keen.log(res);
+  //     console.log('ok');
+  //   })
+  //   .catch(some => {
+  //     console.log('failed',some);
+  //   });
+
+  // return;
+
+
+  // client
+  //   .recordEvent('recordEvent', eventBody, function(err, res){
+  //     console.log('with callback');
+  //     if (err) {
+  //       console.log('err', err);
+  //     } else {
+  //       Keen.log('#recordEvent');
+  //       Keen.log(res);
+  //     }
+  //   })
+  //   .then((res) => {
+  //     console.log('with promise');
+  //     Keen.log('#recordEvent');
+  //     Keen.log(res);
+  //     console.log('ok');
+  //   })
+  //   .catch(some => {
+  //     console.log('failed',some);
+  //   });
+
+  // client.recordEvents({ 'recordEvents': [eventBody, eventBody, eventBody] }, function(err, res){
+  //   console.log('with callback');
+  //   if (err) {
+  //     console.log('err', err);
+  //   } else {
+  //     Keen.log('#recordEvents');
+  //     Keen.log(res);
+  //   }
+  // })
+  // .then((res) => {
+  //   console.log('with promise');
+  //   Keen.log('#recordEvents');
+  //   Keen.log(res);
+  //   console.log('ok');
+  // })
+  // .catch(err => {
+  //   console.log('failed', err);
+  // });
   /*  */
 }
 
