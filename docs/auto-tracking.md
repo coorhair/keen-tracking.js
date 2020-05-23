@@ -7,7 +7,7 @@ Automatically record pageviews, clicks, form submissions and element_views, with
 Install this package from NPM *Recommended*
 
 ```ssh
-npm install keen-tracking --save
+npm install @regang/keen-tracking --save
 ```
 
 Or load it from public CDN

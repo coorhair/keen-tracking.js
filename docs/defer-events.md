@@ -5,7 +5,7 @@ These methods handle an internal queue of events, which is pushed to the [events
 ### Defer a single event
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const client = new KeenTracking({
   // projectId: '',
@@ -27,7 +27,7 @@ client.deferEvent('purchase', {
 ### Defer multiple events
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const client = new KeenTracking({ /*configure*/ });
 
@@ -55,7 +55,7 @@ client.queue.pause();
 Flush all events currently queued by calling `client.recordDeferredEvents()`.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const client = new KeenTracking({ /*configure*/ });
 

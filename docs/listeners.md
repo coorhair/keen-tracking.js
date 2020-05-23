@@ -5,7 +5,7 @@
 **Important:** Form submits and clicks will be delayed by 500ms, unless the event is cancelled within a given listener's callback.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 // Listen to DOM events
 
@@ -50,7 +50,7 @@ formListener.on('submit', (e) => {
 This is a convenience function for quickly creating multiple listeners. These listeners are constructed with the `KeenTracking.utils.listener` utility, so the behavior will be identical to calling `KeenTracking.utils.listener(selector).on(eventType, callback);`.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 KeenTracking.listenTo({
   'click .nav li > a': (e) => {
@@ -71,7 +71,7 @@ KeenTracking.listenTo({
 This technique does not return a reference to the listener, but can be deactivated by defining a listener with the same selector and calling the `.off(eventType)` event:
 
 ```JavaScript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 KeenTracking.utils.listener('.nav li > a').off('click');
 KeenTracking.utils.listener('form#signup').off('submit');
@@ -89,7 +89,7 @@ To capture events from anchor tags that contain nested elements, such as `<img>`
 ```
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 KeenTracking.utils.listener('a.my-btn, a.my-btn *').on('click', (e) => {
   return client.recordEvent('signup', {
@@ -102,7 +102,7 @@ KeenTracking.utils.listener('a.my-btn, a.my-btn *').on('click', (e) => {
 ### Window events
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const winListener = KeenTracking.utils.listener('window')
   .once('scroll', (e) => {

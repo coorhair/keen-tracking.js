@@ -5,7 +5,7 @@ These methods extend the event body of every event sent through `recordEvent()` 
 `extendEvents` transforms will be applied first, followed by collection-specific `extendEvent` transforms. In either case, transforms will be applied in the order that they are defined. Properties provided in the originating `recordEvent/s()` call will override any matching properties (static or dynamic) returned by these methods.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 const client = new KeenTracking({ /*configure*/ });
 // Extend events for a single collection
 client.extendEvent('transaction', {});
@@ -51,7 +51,7 @@ client.extendEvents(() => {
 **Example usage:**
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 const client = new KeenTracking({ /*configure*/ });
 
 // Object (static)

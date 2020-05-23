@@ -9,7 +9,7 @@ These helpers are designed to generate useful properties and objects for event d
 This helper works with a new `Date` object, and therefore the value returned is localized and not UTC. [Read more about this issue here](https://github.com/keen/keen-tracking.js/issues/49).
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const datetimeIndex = KeenTracking.helpers.getDatetimeIndex();
 /*
@@ -29,7 +29,7 @@ const datetimeIndex = KeenTracking.helpers.getDatetimeIndex();
 Create and pass a UTC `Date` object into `KeenTracking.helpers.getDatetimeIndex()` to include a UTC datetime index with your event data model.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const now = new Date();
 const utc = new Date(
@@ -60,7 +60,7 @@ const utcDatetimeIndex = KeenTracking.helpers.getDatetimeIndex(utc);
 `KeenTracking.helpers.getUniqueId()` returns a UUID. This is useful in conjunction with `KeenTracking.utils.cookie()` for identifying and tracking unauthenticated site visitors.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const uniqueId = KeenTracking.helpers.getUniqueId();
 // '150caf6b-ef9f-48cd-ae32-43e2f5bb0fe8'
@@ -71,7 +71,7 @@ const uniqueId = KeenTracking.helpers.getUniqueId();
 `KeenTracking.helpers.getDomNodePath(el)` returns the xPath for a given DOM element.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const btn = document.getElementById('signup-button');
 const domNodePath = KeenTracking.helpers.getDomNodePath(btn);
@@ -92,7 +92,7 @@ const domNodePath = KeenTracking.helpers.getDomNodePath(btn);
 ```
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const btn = document.getElementById('signup-button');
 const domNodeProfile = KeenTracking.helpers.getDomNodeProfile(btn);
@@ -120,7 +120,7 @@ const domNodeProfile = KeenTracking.helpers.getDomNodeProfile(btn);
 `KeenTracking.helpers.getScreenProfile()` returns a set of properties describing the current device screen, like "height", "availHeight", and "orientation".
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const screenProfile = KeenTracking.helpers.getScreenProfile();
 /*
@@ -144,7 +144,7 @@ const screenProfile = KeenTracking.helpers.getScreenProfile();
 `KeenTracking.helpers.getWindowProfile()` returns a set of properties describing the current window, like "height", "scrollHeight", and "ratio" to screen dimensions.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const windowProfile = KeenTracking.helpers.getWindowProfile();
 /*
@@ -165,7 +165,7 @@ const windowProfile = KeenTracking.helpers.getWindowProfile();
 `KeenTracking.helpers.getBrowserProfile()` returns a set of properties describing the current browser, like "useragent", "online" status, and "language", plus [screen](#screen-profile) and [window](#window-profile) profiles.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const browserProfile = KeenTracking.helpers.getBrowserProfile();
 /*
@@ -212,7 +212,7 @@ const browserProfile = KeenTracking.helpers.getBrowserProfile();
 `KeenTracking.helpers.getScrollState()` returns an object of properties profiling the current scroll state. This lets you measure how much of a page a user has viewed before taking a recorded action.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const scrollState = KeenTracking.helpers.getScrollState();
 /*

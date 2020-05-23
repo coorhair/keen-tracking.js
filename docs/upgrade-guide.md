@@ -21,7 +21,7 @@ Please avoid using these deprecated methods, as they will eventually get axed. D
 This method now references an internal collection of resource paths, and constructs URLs using client configuration properties like `host` and `projectId`:
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 const client = new KeenTracking({ /*configure*/ });
 
 const url = client.url('projectId');
@@ -40,7 +40,7 @@ Default resources:
 Unmatching strings will be appended to the base resource, like so:
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 const client = new KeenTracking({ /*configure*/ });
 
 const url = client.url('/3.0/projects');
@@ -50,7 +50,7 @@ const url = client.url('/3.0/projects');
 You can also pass in an object to append a serialized query string to the result, like so:
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 const client = new KeenTracking({ /*configure*/ });
 
 const url = client.url('events', { api_key: 'YOUR_API_KEY' });
@@ -60,7 +60,7 @@ const url = client.url('events', { api_key: 'YOUR_API_KEY' });
 Resources can be returned or added with the `client.resources()` method, like so:
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 const client = new KeenTracking({ /*configure*/ });
 
 client.resources()

@@ -18,7 +18,11 @@ Track events, user actions, clicks, pageviews, conversions and more!
 Install this package from NPM *Recommended*
 
 ```ssh
-npm install keen-tracking --save
+npm install @regang/keen-tracking --save
+```
+or
+```ssh
+yarn add @regang/keen-tracking
 ```
 
 Public CDN
@@ -49,7 +53,7 @@ The following examples demonstrate how to implement rock-solid web analytics, ca
 ### Record an Event
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const client = new KeenTracking({
   projectId: 'PROJECT_ID',
@@ -103,7 +107,7 @@ Automatically record `pageviews`, `clicks`, `form_submissions` and `element_view
 First, let's create a new `client` instance with your Project ID and Write Key, and use the `.extendEvents()` method to define a solid baseline data model that will be applied to every single event that is recorded. Consistent data models and property names make life much easier later on, when analyzing and managing several event streams. This setup also includes our [data enrichment add-ons](https://keen.io/docs/streams/data-enrichment-overview/), which will populate additional information when an event is received on our end.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const client = new KeenTracking({
   projectId: 'PROJECT_ID',
@@ -228,7 +232,7 @@ Clicks and form submissions can be captured with `.listenTo()`.
 This example further extends the `client` instance defined previously, and activates a simple timer when the page the loaded. Once a `click` or `submit` event is captured, the timer's value will be recorded as `visitor.time_on_page`.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const client = new KeenTracking({
   projectId: 'PROJECT_ID',
@@ -323,7 +327,7 @@ Use [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Int
 Note: This feature works only on the [browsers that support Intersection Observer](https://caniuse.com/#search=IntersectionObserver).
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const client = new KeenTracking({
   projectId: 'PROJECT_ID',
@@ -394,7 +398,7 @@ This can also be used with [automated event tracking](./docs/auto-tracking.md).
 ### Server-side Event Tracking
 
 ```javascript
-const KeenTracking = require('keen-tracking');
+const KeenTracking = require('@regang/keen-tracking');
 
 const client = new KeenTracking({
   projectId: 'PROJECT_ID',
@@ -441,7 +445,7 @@ client
 When KeenTracking encounters connection problems, it will retry to send the data.
 
 ```javascript
-import KeenTracking from 'keen-tracking';
+import KeenTracking from '@regang/keen-tracking';
 
 const client = new KeenTracking({
   projectId: 'PROJECT_ID',

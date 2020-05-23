@@ -13,7 +13,7 @@ sessionCookie.set('user_id', '222323843234');
 // Set multiple values
 sessionCookie.set({
   user_id: '222323843234',
-  first_referrer: 'https://github.com/@regang/keen-tracking.js'
+  first_referrer: 'https://github.com/coorhair/keen-tracking.js'
 })
 
 // Get a single value, if it exists
