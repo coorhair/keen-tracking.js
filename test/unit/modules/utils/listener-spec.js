@@ -1,7 +1,7 @@
 import 'promise-polyfill/src/polyfill';
 
 import Keen from '../../../../lib/browser';
-import each from 'keen-core/lib/utils/each';
+import each from '@regang/keen-core/lib/utils/each';
 import { listenerCore } from '../../../../lib/utils/listener';
 const listener = listenerCore(Keen);
 const mockFn1 = jest.fn();
