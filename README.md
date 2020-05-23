@@ -84,7 +84,8 @@ Automatically record `pageviews`, `clicks`, `form_submissions` and `element_view
   KeenTracking.ready(function(){
     const client = new KeenTracking({
       projectId: 'YOUR_PROJECT_ID',
-      writeKey: 'YOUR_WRITE_KEY'
+      writeKey: 'YOUR_WRITE_KEY',
+      requestType: 'beaconAPI',
     });
     client.initAutoTracking();
   });
