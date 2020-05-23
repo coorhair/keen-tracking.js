@@ -13,7 +13,7 @@ npm install keen-tracking --save
 Or load it from public CDN
 
 ```html
-<script crossorigin src="https://cdn.jsdelivr.net/npm/keen-tracking@4"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/@regang/keen-tracking@4"></script>
 <script>
 KeenTracking.ready(function(){
   const client = new KeenTracking({
@@ -47,7 +47,7 @@ client.initAutoTracking({
 
   recordClicks: true, // record clicks on A links
   recordClicksPositionPointer: false, // record pointer position for clicks
-  
+
   // FORMS
   recordFormSubmits: true,
   ignoreDisabledFormFields: false,
@@ -72,7 +72,7 @@ client.initAutoTracking({
 
 We make requests using the [BeaconAPI](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API).
 It's the fastest non-invasive way to track user behaviour.
-Due its nature, BeaconAPI runs requests in the background, with no possibility  
+Due its nature, BeaconAPI runs requests in the background, with no possibility
 to handle errors. If you want to handle errors, you need to use the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
 ```javascript
@@ -181,7 +181,7 @@ Install [mobile-detect.js](https://github.com/hgoebl/mobile-detect.js) to identi
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.2/mobile-detect.min.js"></script>
-<script crossorigin src="https://cdn.jsdelivr.net/npm/keen-tracking@4"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/@regang/keen-tracking@4"></script>
 <script>
 Keen.ready(function(){
   const md = new MobileDetect(window.navigator.userAgent);
