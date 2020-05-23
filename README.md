@@ -22,7 +22,7 @@ npm install keen-tracking --save
 Public CDN
 
 ```html
-<script crossorigin src="https://cdn.jsdelivr.net/npm/@regang/keen-tracking@4"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/@regang/keen-tracking@latest"></script>
 ```
 
 ### Project ID & API Keys
@@ -79,7 +79,7 @@ Automatically record `pageviews`, `clicks`, `form_submissions` and `element_view
 ```html
 <script>
   (function(name,path,ctx){ctx[name]=ctx[name]||{ready:function(fn){var h=document.getElementsByTagName('head')[0],s=document.createElement('script'),w=window,loaded;s.onload=s.onerror=s.onreadystatechange=function(){if((s.readyState&&!(/^c|loade/.test(s.readyState)))||loaded){return}s.onload=s.onreadystatechange=null;loaded=1;ctx[name].ready(fn)};s.async=1;s.src=path;h.parentNode.insertBefore(s,h)}}})
-  ('KeenTracking', 'https://cdn.jsdelivr.net/npm/@regang/keen-tracking@4/dist/keen-tracking.min.js', this);
+  ('KeenTracking', 'https://cdn.jsdelivr.net/npm/@regang/keen-tracking@latest/dist/keen-tracking.min.js', this);
 
   KeenTracking.ready(function(){
     const client = new KeenTracking({

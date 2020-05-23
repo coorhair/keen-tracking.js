@@ -13,7 +13,7 @@ npm install keen-tracking --save
 Or load it from public CDN
 
 ```html
-<script crossorigin src="https://cdn.jsdelivr.net/npm/@regang/keen-tracking@4"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/@regang/keen-tracking@latest"></script>
 <script>
 KeenTracking.ready(function(){
   const client = new KeenTracking({
@@ -181,7 +181,7 @@ Install [mobile-detect.js](https://github.com/hgoebl/mobile-detect.js) to identi
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.2/mobile-detect.min.js"></script>
-<script crossorigin src="https://cdn.jsdelivr.net/npm/@regang/keen-tracking@4"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/@regang/keen-tracking@latest"></script>
 <script>
 Keen.ready(function(){
   const md = new MobileDetect(window.navigator.userAgent);

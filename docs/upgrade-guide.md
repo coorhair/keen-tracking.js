@@ -16,7 +16,7 @@ Please avoid using these deprecated methods, as they will eventually get axed. D
 
 ### Breaking changes
 
-The previous implementation of `client.url()` automatically included `https://api.keen.io/3.0/projects/PROJECT_ID` plus a `path` argument ('/events/whatever'). This design severely limited its utility, so we've revamped this method.
+~~The previous implementation of `client.url()` automatically included `https://api.keen.io/3.0/projects/PROJECT_ID` plus a `path` argument ('/events/whatever'). This design severely limited its utility, so we've revamped this method.~~ I made default `host` changes to `activity.brainhub.vn`
 
 This method now references an internal collection of resource paths, and constructs URLs using client configuration properties like `host` and `projectId`:
 
@@ -26,7 +26,7 @@ const client = new KeenTracking({ /*configure*/ });
 
 const url = client.url('projectId');
 // Renders {protocol}://{host}/3.0/projects/{projectId}
-// Returns https://api.keen.io/3.0/projects/PROJECT_ID
+// Returns https://activity.brainhub.vn/3.0/projects/PROJECT_ID
 ```
 
 Default resources:
@@ -44,7 +44,7 @@ import KeenTracking from 'keen-tracking';
 const client = new KeenTracking({ /*configure*/ });
 
 const url = client.url('/3.0/projects');
-// Returns https://api.keen.io/3.0/projects
+// Returns https://activity.brainhub.vn/3.0/projects
 ```
 
 You can also pass in an object to append a serialized query string to the result, like so:
@@ -54,7 +54,7 @@ import KeenTracking from 'keen-tracking';
 const client = new KeenTracking({ /*configure*/ });
 
 const url = client.url('events', { api_key: 'YOUR_API_KEY' });
-// Returns https://api.keen.io/3.0/projects/PROJECT_ID/events?api_key=YOUR_API_KEY
+// Returns https://activity.brainhub.vn/3.0/projects/PROJECT_ID/events?api_key=YOUR_API_KEY
 ```
 
 Resources can be returned or added with the `client.resources()` method, like so:
