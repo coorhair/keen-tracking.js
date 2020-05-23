@@ -1,4 +1,6 @@
-# keen-tracking.js
+# keen-tracking.js (dedicated to EcomSig)
+
+*This lib (based on `keen-tracking.js@4.5.1`) is modified to fit requirements of EcomSig project*
 
 A JavaScript tracking library for [Keen](https://keen.io).
 Track events, user actions, clicks, pageviews, conversions and more!
