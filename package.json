@@ -1,6 +1,6 @@
 {
   "name": "@regang/keen-tracking",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Track events - custom user actions, clicks, pageviews, purchases.",
   "main": "dist/node/keen-tracking.js",
   "browser": "dist/keen-tracking.js",
